@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+
+
+<table class="board">
+    <tbody>
+      {% for row in board %}
+      <tr>
+        {% for cell in row %}
+        <td>{{ cell }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+<form action=""class="add-word" method="POST">
+    <input type="text" name="word" placeholder="Enter a guess" id="word" class="word">
+    <button type="submit">Submit</button>
+</form>
+
+<ul class="words">
+
+</ul>
+
+<h1 id="yes">HELLO</h1>
+
+    
+
+    
+
+{% endblock %}
+
+{{super()}}
